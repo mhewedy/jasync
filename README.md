@@ -35,6 +35,16 @@ String resutl1 = await(p1);
 String resutl2 = await(p2);
 ```
 
+3. Can be used inside Java 8 Streams:
+
+```java
+IntStream.rangeClosed(1, 12)
+	.boxed()
+	.map(month -> async(() -> doSomeFunction("%d%02d30".formatted(year, month))))
+	.map(it -> await(it).dateInt == 0 ? "29" : "30")
+	.collect(Collectors.toList());
+```
+
 > NOTE: It is different from Javascript async await. it when multiple async operation cascaded, you need to wait for the first before invoke the second.
 
 
