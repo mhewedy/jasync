@@ -36,3 +36,8 @@ String resutl2 = await(p2);
 ```
 
 > NOTE: It is different from Javascript async await. it when multiple async operation cascaded, you need to wait for the first before invoke the second.
+
+
+#### 🎖 Special Thanks
+
+Special thanks to [Rashad Saif](https://github.com/rashadsaif) and [Hamada Elnoby](https://github.com/hamadaelnopy) for helping in the design, inspring with ideas, and for doing code review.  
