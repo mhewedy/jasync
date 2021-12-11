@@ -8,6 +8,15 @@ call multiple long-running processes and wait for execution at the end.
 It integrates with spring framework (but don't require it). so if you need to run the async tasks on a
 Spring `TaskExecutor`, you need to define a bean of type `TaskExecutor` with the name `jasyncTaskExecutor`
 
+## Install
+```xml
+<dependency>
+  <groupId>com.github.mhewedy</groupId>
+  <artifactId>jasync</artifactId>
+  <version>0.0.4</version>
+</dependency>
+```
+
 ## Example
 
 1. Invoke functions and doesn't expect result:
