@@ -13,8 +13,8 @@ Spring `TaskExecutor`, you need to define a bean of type `TaskExecutor` with the
 1. Invoke functions and doesn't expect result:
 
 ```java
-Promise<?> p1=async(this::callLongRunningFunction1);
-Promise<?> p2=async(this::callLongRunningFunction2);
+Promise<?> p1 = async(this::callLongRunningFunction1);
+Promise<?> p2 = async(this::callLongRunningFunction2);
 
 // ... other code here ...
 
@@ -25,14 +25,14 @@ await(p1,p2);
 2. Invoke functions and expects result:
 
 ```java
-Promise<String> p1=async(this::callLongRunningFunction1);
-Promise<String> p2=async(this::callLongRunningFunction2);
+Promise<String> p1 = async(this::callLongRunningFunction1);
+Promise<String> p2 = async(this::callLongRunningFunction2);
 
 // ... other code here ...
 
 // and at the last:
-String resutl1=await(p1);
-String resutl2=await(p2);
+String resutl1 = await(p1);
+String resutl2 = await(p2);
 ```
 
 > NOTE: It is different from Javascript async await. it when multiple async operation cascaded, you need to wait for the first before invoke the second.
