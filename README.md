@@ -28,7 +28,7 @@ Promise<?> p2 = async(this::callLongRunningFunction2);
 // ... other code here ...
 
 // and at the last:
-await(p1,p2);
+await(p1, p2);
 ```
 
 2. Invoke functions and expects result:
