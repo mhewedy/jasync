@@ -106,7 +106,7 @@ public class Promise<T> {
                     .filter(Objects::nonNull)
                     .map(it -> it.future)
                     .forEach(f -> f.exceptionally(e -> {
-                        log.warn("a future has failed due to '{}'. canceling all other futures.", e.toString());
+                        log.trace("a future has failed due to '{}'. canceling all other futures.", e.toString());
                         all.completeExceptionally(e);
                         return null;
                     }));
