@@ -5,7 +5,7 @@ JAsync provides `async` and `await` functions in Java (8+) based on `Completable
 The idea is very basic, `async` and `await` are wrappers on `CompletableFuture`'s methods to give a convenient way to
 call multiple long-running processes and wait for execution at the end.
 
->NOTE: It is differnt from Javascript async/await where in JS the code suspended until the result returned, but here a thread is handling the call(s) and then we block and wait for the result at the end.
+>NOTE: It is different from Javascript async/await where in JS the code suspended until the result returned, but here a thread is handling the call(s) and then we block and wait for the result at the end.
 
 It integrates with spring framework (but don't require it). so if you need to run the async tasks on a
 Spring `TaskExecutor`, you need to define a bean of type `TaskExecutor` with the name `jasyncTaskExecutor`
