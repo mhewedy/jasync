@@ -6,7 +6,7 @@
 
     <groupId>com.github.mhewedy</groupId>
     <artifactId>jasync</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <name>JAsync</name>
     <description>Simple Java async-wait alike on top of CompletableFuture</description>
 

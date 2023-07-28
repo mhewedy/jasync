@@ -15,7 +15,7 @@ Spring `TaskExecutor`, you need to define a bean of type `TaskExecutor` with the
 <dependency>
   <groupId>com.github.mhewedy</groupId>
   <artifactId>jasync</artifactId>
-  <version>0.0.2</version>
+  <version>0.0.3</version>
 </dependency>
 ```
 
