@@ -13,7 +13,7 @@ import java.util.function.Supplier;
 @Slf4j
 public class Promise<T> {
 
-    private final CompletableFuture<T> future;
+    public final CompletableFuture<T> future;
 
     private Promise(CompletableFuture<T> future) {
         this.future = future;
