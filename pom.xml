@@ -6,7 +6,7 @@
 
     <groupId>com.github.mhewedy</groupId>
     <artifactId>jasync</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <name>JAsync</name>
     <description>Simple Java async-wait alike on top of CompletableFuture</description>
 
@@ -50,9 +50,10 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.8</version>
+            <version>1.18.22</version>
+            <optional>true</optional>
         </dependency>
-
+        <!-- optional, for integration with spring-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -138,7 +139,6 @@
                     </gpgArguments>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 
