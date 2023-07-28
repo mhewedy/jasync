@@ -117,7 +117,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <!--<plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
                 <version>1.5</version>
@@ -131,13 +131,13 @@
                     </execution>
                 </executions>
                 <configuration>
-                    &lt;!&ndash; Prevent gpg from using pinentry programs &ndash;&gt;
+                    <!-- Prevent gpg from using pinentry programs -->
                     <gpgArguments>
-                        <arg>&#45;&#45;pinentry-mode</arg>
+                        <arg>--pinentry-mode</arg>
                         <arg>loopback</arg>
                     </gpgArguments>
                 </configuration>
-            </plugin>-->
+            </plugin>
 
         </plugins>
     </build>
