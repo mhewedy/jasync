@@ -2,9 +2,6 @@ package com.github.mhewedy.jasync;
 
 import java.util.Random;
 
-import static com.github.mhewedy.jasync.Promise.async;
-import static com.github.mhewedy.jasync.Promise.await;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -14,12 +11,10 @@ public class Main {
     private static class Test {
 
         void invoker() {
-            Promise<?> p1 = async(this::callLongRunningFunction1);
-            Promise<?> p2 = async(this::callLongRunningFunction2);
+            Promise<?> p1 = Task.async(this::callLongRunningFunction1);
+            Promise<?> p2 = Task.async(this::callLongRunningFunction2);
 
-            await(p1, p2);
-
-            // or
+            Task.await(p1, p2);
         }
 
         private void callLongRunningFunction1() {

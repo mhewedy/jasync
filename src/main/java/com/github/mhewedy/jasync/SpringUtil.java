@@ -9,10 +9,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.concurrent.Executor;
 
-class SpringPromise {
+class SpringUtil {
 
     private static final boolean FOUND_SPRING_EXECUTOR = isClassPresent("org.springframework.core.task.TaskExecutor");
-
 
     /**
      * try to find a bean with name jasyncTaskExecutor of type {@link TaskExecutor}
