@@ -26,8 +26,8 @@ Spring `TaskExecutor`, you need to define a bean of type `TaskExecutor` with the
 1. Invoke functions and doesn't expect results:
 
 ```java
-Promise<?> p1 = Task.async(this::callLongRunningFunction1);
-Promise<?> p2 = Task.async(this::callLongRunningFunction2);
+var p1 = Task.async(() -> callLongRunningFunction1());
+var p2 = Task.async(() -> callLongRunningFunction2());
 
 // ... other code here ...
 
@@ -38,8 +38,8 @@ Task.await(p1, p2);
 2. Invoke functions and expects result:
 
 ```java
-Promise<String> p1 = Task.async(this::callLongRunningFunction1);
-Promise<String> p2 = Task.async(this::callLongRunningFunction2);
+var p1 = Task.async(() -> callLongRunningFunction1());
+var p2 = Task.async(() -> callLongRunningFunction2());
 
 // ... other code here ...
 
