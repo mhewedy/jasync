@@ -20,8 +20,6 @@ Spring `TaskExecutor`, you need to define a bean of type `TaskExecutor` with the
 
 ## Example
 
-1. Invoke functions and doesn't expect results:
-
 ```java
 var p1 = Task.async(() -> callLongRunningFunction1());
 var p2 = Task.async(() -> callLongRunningFunction2());
@@ -30,19 +28,6 @@ var p2 = Task.async(() -> callLongRunningFunction2());
 
 // and at the last:
 Task.await(p1, p2);
-```
-
-2. Invoke functions and expects result:
-
-```java
-var p1 = Task.async(() -> callLongRunningFunction1());
-var p2 = Task.async(() -> callLongRunningFunction2());
-
-// ... other code here ...
-
-// and at the last:
-String resutl1 = Task.await(p1);
-String resutl2 = Task.await(p2);
 ```
 
 >It is different from Javascript async/await where in JS the code is suspended until the result is returned, but here a thread is handling the call(s) and then we block and wait for the result at the end.
